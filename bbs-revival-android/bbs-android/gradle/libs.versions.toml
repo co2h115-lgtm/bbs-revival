@@ -1,0 +1,72 @@
+[versions]
+agp                  = "8.12.3"
+kotlin               = "2.0.21"
+ksp                  = "2.0.21-1.0.27"
+hilt                 = "2.52"
+compose-bom          = "2024.12.01"
+nav-compose          = "2.8.5"
+lifecycle            = "2.8.7"
+room                 = "2.6.1"
+datastore            = "1.1.1"
+ktor                 = "3.0.3"
+socket-io            = "2.1.0"
+coil                 = "3.0.4"
+coroutines           = "1.9.0"
+splashscreen         = "1.0.1"
+security-crypto      = "1.1.0-alpha06"
+
+[libraries]
+# AndroidX Core
+androidx-core-ktx              = { group = "androidx.core",         name = "core-ktx",              version = "1.15.0" }
+androidx-lifecycle-runtime     = { group = "androidx.lifecycle",    name = "lifecycle-runtime-ktx",  version.ref = "lifecycle" }
+androidx-lifecycle-viewmodel   = { group = "androidx.lifecycle",    name = "lifecycle-viewmodel-compose", version.ref = "lifecycle" }
+androidx-activity-compose      = { group = "androidx.activity",     name = "activity-compose",       version = "1.9.3" }
+androidx-splashscreen          = { group = "androidx.core",         name = "core-splashscreen",      version.ref = "splashscreen" }
+androidx-security-crypto       = { group = "androidx.security",     name = "security-crypto",        version.ref = "security-crypto" }
+androidx-datastore             = { group = "androidx.datastore",    name = "datastore-preferences",  version.ref = "datastore" }
+
+# Compose
+compose-bom                    = { group = "androidx.compose",      name = "compose-bom",            version.ref = "compose-bom" }
+compose-ui                     = { group = "androidx.compose.ui",   name = "ui" }
+compose-ui-graphics            = { group = "androidx.compose.ui",   name = "ui-graphics" }
+compose-ui-tooling-preview     = { group = "androidx.compose.ui",   name = "ui-tooling-preview" }
+compose-material3              = { group = "androidx.compose.material3", name = "material3" }
+compose-material-icons         = { group = "androidx.compose.material", name = "material-icons-extended" }
+compose-ui-tooling             = { group = "androidx.compose.ui",   name = "ui-tooling" }
+compose-navigation             = { group = "androidx.navigation",   name = "navigation-compose",     version.ref = "nav-compose" }
+
+# Room
+room-runtime                   = { group = "androidx.room",         name = "room-runtime",           version.ref = "room" }
+room-ktx                       = { group = "androidx.room",         name = "room-ktx",               version.ref = "room" }
+room-compiler                  = { group = "androidx.room",         name = "room-compiler",          version.ref = "room" }
+
+# Hilt DI
+hilt-android                   = { group = "com.google.dagger",     name = "hilt-android",           version.ref = "hilt" }
+hilt-compiler                  = { group = "com.google.dagger",     name = "hilt-android-compiler",  version.ref = "hilt" }
+hilt-nav-compose               = { group = "androidx.hilt",         name = "hilt-navigation-compose", version = "1.2.0" }
+
+# Ktor (HTTP client)
+ktor-client-core               = { group = "io.ktor",               name = "ktor-client-core",       version.ref = "ktor" }
+ktor-client-android            = { group = "io.ktor",               name = "ktor-client-android",    version.ref = "ktor" }
+ktor-client-content-negotiation = { group = "io.ktor",              name = "ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-serialization-json        = { group = "io.ktor",               name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-client-logging            = { group = "io.ktor",               name = "ktor-client-logging",    version.ref = "ktor" }
+ktor-client-auth               = { group = "io.ktor",               name = "ktor-client-auth",       version.ref = "ktor" }
+
+# Socket.IO
+socket-io                      = { group = "io.socket",             name = "socket.io-client",       version.ref = "socket-io" }
+
+# Kotlin
+kotlin-serialization-json      = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version = "1.7.3" }
+kotlin-coroutines-android      = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+
+# Coil (image loading)
+coil-compose                   = { group = "io.coil-kt.coil3",      name = "coil-compose",           version.ref = "coil" }
+
+[plugins]
+android-application            = { id = "com.android.application",              version.ref = "agp" }
+kotlin-android                 = { id = "org.jetbrains.kotlin.android",          version.ref = "kotlin" }
+kotlin-compose                 = { id = "org.jetbrains.kotlin.plugin.compose",   version.ref = "kotlin" }
+kotlin-serialization           = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+hilt                           = { id = "com.google.dagger.hilt.android",        version.ref = "hilt" }
+ksp                            = { id = "com.google.devtools.ksp",               version.ref = "ksp" }
